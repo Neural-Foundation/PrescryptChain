@@ -144,7 +144,7 @@ class PrescriptionManager(models.Manager):
         rx.create_raw_msg()
         rx.sign()
         # Save previous hash
-
+        import code; code.interact(local=locals())
         if Prescription.objects.last() is None:
             rx.previous_hash = "0"
         else:

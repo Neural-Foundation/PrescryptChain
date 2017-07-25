@@ -25,8 +25,8 @@ class MedicationNestedSerializer(serializers.ModelSerializer):
         fields = ('id', 'presentation', 'instructions', 'drug_upc',)
         read_only_fields = ('id',)
         extra_kwargs = {
-            'presentation': { 'required': 'False', 'min_length': 4},
-            'instructions': { 'required': 'False', 'min_length': 4}
+            'presentation': { 'required': 'False', 'min_length': 1},
+            'instructions': { 'required': 'False', 'min_length': 1}
         }
 
 class PrescriptionSerializer(serializers.ModelSerializer):
